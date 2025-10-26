@@ -1,0 +1,9 @@
+# API Configuration - Keep this private!
+api-config.js
+
+# Node modules (if you add them later)
+node_modules/
+
+# Environment files
+.env
+.env.local
