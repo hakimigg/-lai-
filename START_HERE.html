@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LAI - Setup Instructions</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+        
+        .container {
+            background: white;
+            border-radius: 20px;
+            padding: 40px;
+            max-width: 700px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+        }
+        
+        h1 {
+            color: #667eea;
+            margin-bottom: 10px;
+            font-size: 32px;
+        }
+        
+        .subtitle {
+            color: #666;
+            margin-bottom: 30px;
+            font-size: 16px;
+        }
+        
+        .step {
+            background: #f8f9fa;
+            padding: 20px;
+            border-radius: 12px;
+            margin-bottom: 20px;
+            border-left: 4px solid #667eea;
+        }
+        
+        .step h2 {
+            color: #333;
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+        
+        .step p {
+            color: #666;
+            line-height: 1.6;
+            margin-bottom: 10px;
+        }
+        
+        .code-box {
+            background: #2d3748;
+            color: #48bb78;
+            padding: 15px;
+            border-radius: 8px;
+            font-family: 'Courier New', monospace;
+            font-size: 14px;
+            margin: 10px 0;
+            overflow-x: auto;
+        }
+        
+        .button {
+            display: inline-block;
+            background: #667eea;
+            color: white;
+            padding: 12px 24px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            margin-top: 20px;
+            transition: all 0.3s;
+        }
+        
+        .button:hover {
+            background: #5568d3;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(102, 126, 234, 0.4);
+        }
+        
+        .link {
+            color: #667eea;
+            text-decoration: none;
+            font-weight: 600;
+        }
+        
+        .link:hover {
+            text-decoration: underline;
+        }
+        
+        .emoji {
+            font-size: 24px;
+            margin-right: 8px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1><span class="emoji">🤖</span>LAI - AI Assistant</h1>
+        <p class="subtitle">Get started in 3 easy steps!</p>
+        
+        <div class="step">
+            <h2><span class="emoji">🔑</span>Step 1: Get Your Free API Key</h2>
+            <p><strong>Recommended: Groq (Free & Fast)</strong></p>
+            <p>1. Visit <a href="https://console.groq.com/keys" target="_blank" class="link">console.groq.com/keys</a></p>
+            <p>2. Sign up with your email</p>
+            <p>3. Click "Create API Key"</p>
+            <p>4. Copy your key (starts with <code>gsk_...</code>)</p>
+        </div>
+        
+        <div class="step">
+            <h2><span class="emoji">⚙️</span>Step 2: Add API Key to Code</h2>
+            <p>Open <strong>script.js</strong> and find this section:</p>
+            <div class="code-box">
+const API_CONFIG = {<br>
+&nbsp;&nbsp;GROQ_API_KEY: 'YOUR_KEY_HERE', // Paste your key here<br>
+&nbsp;&nbsp;OPENAI_API_KEY: '',<br>
+&nbsp;&nbsp;PROVIDER: 'groq'<br>
+};
+            </div>
+            <p>Replace <code>YOUR_KEY_HERE</code> with your actual API key</p>
+        </div>
+        
+        <div class="step">
+            <h2><span class="emoji">🚀</span>Step 3: Run the Website</h2>
+            <p><strong>Option A: Python Server</strong></p>
+            <div class="code-box">
+cd "ai website"<br>
+python -m http.server 8000
+            </div>
+            <p>Then open: <a href="http://localhost:8000" target="_blank" class="link">http://localhost:8000</a></p>
+            
+            <p style="margin-top: 15px;"><strong>Option B: VS Code Live Server</strong></p>
+            <p>Right-click <code>index.html</code> → "Open with Live Server"</p>
+        </div>
+        
+        <a href="index.html" class="button">
+            <span class="emoji">💬</span>Open Chat Interface
+        </a>
+        
+        <div style="margin-top: 30px; padding-top: 20px; border-top: 2px solid #f0f0f0;">
+            <p style="color: #999; font-size: 14px;">
+                <strong>Need help?</strong> Check README.md for detailed instructions
+            </p>
+        </div>
+    </div>
+</body>
+</html>
